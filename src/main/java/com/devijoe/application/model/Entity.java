@@ -36,7 +36,7 @@ public abstract class Entity {
 
     /** Карта, хранящая текстуры объекта в зависимости от их направления */
     @Getter
-    private final Map<? extends Key, BufferedImage> texture;
+    private final Map<Enum, BufferedImage> texture;
 
     /** Текущая текстура */
     @Getter @Setter
@@ -49,7 +49,7 @@ public abstract class Entity {
      * @param entityType - тип объекта
      * @param texture - карта с текстурами объекта
      */
-    public Entity(final double x, final double y, final EntityType entityType, final Map<? extends Key, BufferedImage> texture) {
+    public Entity(final double x, final double y, final EntityType entityType, final Map<Enum, BufferedImage> texture) {
         this.width = texture.get(Direction.NORTH).getWidth();
         this.height = texture.get(Direction.NORTH).getHeight();
         this.entityType = entityType;

@@ -2,6 +2,7 @@ package com.devijoe.application.view.spriteModule;
 
 
 import com.devijoe.application.Settings;
+import com.devijoe.application.model.entity_description.Direction;
 import lombok.Data;
 
 import java.util.Arrays;
@@ -15,14 +16,16 @@ public enum TextureType {
             new Container(2 * Settings.TANK_TEXTURE_SIZE, 2 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(4 * Settings.TANK_TEXTURE_SIZE, 4 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(6 * Settings.TANK_TEXTURE_SIZE, 6 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE)
-    )),
+    ),
+            Direction.values()),
 
     GREEN_STANDARD_TANK((LinkedList) Arrays.asList(
             new Container(0 * Settings.TANK_TEXTURE_SIZE, 0 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(2 * Settings.TANK_TEXTURE_SIZE, 2 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(4 * Settings.TANK_TEXTURE_SIZE, 4 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(6 * Settings.TANK_TEXTURE_SIZE, 6 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE)
-            ));
+            ),
+            Direction.values());
 
 
     @Data
@@ -42,11 +45,18 @@ public enum TextureType {
 
     private LinkedList<Container> textureContext;
 
-    TextureType(LinkedList<Container> textureContext) {
+    Enum[] anEnum;
+
+    TextureType(LinkedList<Container> textureContext, Enum[] anEnum) {
         this.textureContext = textureContext;
+        this.anEnum = anEnum;
     }
 
     public LinkedList<Container> getTextureContext() {
         return textureContext;
+    }
+
+    public Enum[] getAnEnum() {
+        return anEnum;
     }
 }

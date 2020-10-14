@@ -31,12 +31,12 @@ public class Player extends Tank {
      * @param control    - система управления танком
      */
 
-    public Player(double x, double y, Map<Direction, BufferedImage> texture, double speed, int hp, Direction direction, ControlManager control) {
+    public Player(double x, double y, Map<Enum, BufferedImage> texture, double speed, int hp, Direction direction, ControlManager control) {
         super(x, y, EntityType.PLAYER, texture, speed, hp, direction);
         this.control = control;
     }
 
-    public Player(double x, double y, Map<Direction, BufferedImage> texture, ControlManager control) {
+    public Player(double x, double y, Map<Enum, BufferedImage> texture, ControlManager control) {
         super(x, y, EntityType.PLAYER, texture);
         this.control = control;
     }

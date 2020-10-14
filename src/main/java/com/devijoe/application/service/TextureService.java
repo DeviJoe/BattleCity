@@ -16,19 +16,19 @@ public class TextureService {
 
     private TextureAtlas atlas = new TextureAtlas("src/main/resources/texture/texture_atlas.png");
 
-    public Map<? extends Key, BufferedImage> generateTextureMapForModel(TextureType type) {
+    public Map<Enum, BufferedImage> generateTextureMapForModel(TextureType type) {
 
         Map map = new HashMap();
 
-        List<Direction> directions = new LinkedList<>();
+        List<Enum> enums = new LinkedList<>();
 
-        for (Direction direction : Direction.values()) {
-            directions.add(direction);
+        for (Enum anEnum : type.getAnEnum()) {
+            enums.add(anEnum);
         }
 
         int i = 0;
         for (TextureType.Container container : type.getTextureContext()) {
-            map.put(directions.get(i), atlas.cut(container.getX(), container.getY(), container.getW(), container.getH()));
+            map.put(enums.get(i), atlas.cut(container.getX(), container.getY(), container.getW(), container.getH()));
             i++;
         }
 

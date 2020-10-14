@@ -30,7 +30,7 @@ public class PlayerService implements IRender, IUpdate {
         this.player = new Player(
                 x,
                 y,
-                (Map<Direction, BufferedImage>) textureService.generateTextureMapForModel(TextureType.GREEN_STANDARD_TANK),
+                textureService.generateTextureMapForModel(TextureType.GREEN_STANDARD_TANK),
                 3,
                 3,
                 Direction.NORTH,

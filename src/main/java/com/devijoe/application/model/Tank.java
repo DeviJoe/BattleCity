@@ -42,7 +42,7 @@ public abstract class Tank extends Entity {
      * @param hp         - уровень здоровья танка
      * @param direction  - направление взгляда танка
      */
-    public Tank(double x, double y, EntityType entityType, Map<Direction, BufferedImage> texture, double speed, int hp, Direction direction) {
+    public Tank(double x, double y, EntityType entityType, Map<Enum, BufferedImage> texture, double speed, int hp, Direction direction) {
         super(x, y, entityType, texture);
         this.speed = speed;
         this.direction = direction;
@@ -50,7 +50,7 @@ public abstract class Tank extends Entity {
         this.level = 1;
     }
 
-    public Tank(double x, double y, EntityType entityType, Map<Direction, BufferedImage> texture) {
+    public Tank(double x, double y, EntityType entityType, Map<Enum, BufferedImage> texture) {
         super(x, y, entityType, texture);
         speed = Settings.TANK_SPEED;
         direction = Direction.NORTH;
