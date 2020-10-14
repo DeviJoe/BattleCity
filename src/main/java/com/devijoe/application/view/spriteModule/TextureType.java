@@ -6,19 +6,18 @@ import lombok.Data;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 
 public enum TextureType {
 
-    YELLOW_STANDARD_TANK(Arrays.asList(
+    YELLOW_STANDARD_TANK((LinkedList) Arrays.asList(
             new Container(0 * Settings.TANK_TEXTURE_SIZE, 0 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(2 * Settings.TANK_TEXTURE_SIZE, 2 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(4 * Settings.TANK_TEXTURE_SIZE, 4 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(6 * Settings.TANK_TEXTURE_SIZE, 6 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE)
     )),
 
-    GREEN_STANDARD_TANK(Arrays.asList(
+    GREEN_STANDARD_TANK((LinkedList) Arrays.asList(
             new Container(0 * Settings.TANK_TEXTURE_SIZE, 0 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(2 * Settings.TANK_TEXTURE_SIZE, 2 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
             new Container(4 * Settings.TANK_TEXTURE_SIZE, 4 * Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE, Settings.TANK_TEXTURE_SIZE),
@@ -41,13 +40,13 @@ public enum TextureType {
         }
     }
 
-    private List<Container> textureContext;
+    private LinkedList<Container> textureContext;
 
-    TextureType(List<Container> textureContext) {
+    TextureType(LinkedList<Container> textureContext) {
         this.textureContext = textureContext;
     }
 
-    public List<Container> getTextureContext() {
+    public LinkedList<Container> getTextureContext() {
         return textureContext;
     }
 }
