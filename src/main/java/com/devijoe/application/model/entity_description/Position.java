@@ -40,13 +40,13 @@ public class Position {
      * @param y
      */
     public void update(final double x, final double y) {
-        this.DownLeft.x = x;
-        this.DownLeft.y = y;
-        this.UpLeft.x = x;
-        this.UpLeft.y = y + height;
-        this.UpRight.x = x + width;
-        this.UpRight.y = y + height;
-        this.DownRight.x = x + width;
-        this.DownRight.y = y;
+        this.DownLeft.setX(x);
+        this.DownLeft.setY(y);
+        this.UpLeft.setX(x);
+        this.UpLeft.setY(y + height);
+        this.UpRight.setX(x + width);
+        this.UpRight.setY(y + height);
+        this.DownRight.setX(x + width);
+        this.DownRight.setY(y);
     }
 }

@@ -14,7 +14,7 @@ import java.util.*;
  */
 public class TextureService {
 
-    private TextureAtlas atlas = new TextureAtlas("resources/textureAtlas.png");
+    private TextureAtlas atlas = new TextureAtlas("src/main/resources/texture/texture_atlas.png");
 
     public Map<? extends Key, BufferedImage> generateTextureMapForModel(TextureType type) {
 

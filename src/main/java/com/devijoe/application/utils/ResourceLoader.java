@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
  */
 public class ResourceLoader
 {
-    public static final String PATH = "resources/";
+
 
     /**
      * Метод осуществляет загрузку изображения
@@ -23,7 +23,7 @@ public class ResourceLoader
     public static BufferedImage loadImage(final String fileName) {
         BufferedImage image = null;
         try {
-            image = ImageIO.read(new File(PATH + fileName));
+            image = ImageIO.read(new File(fileName));
         }
         catch (IOException e) {
             e.printStackTrace();
