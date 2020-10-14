@@ -34,7 +34,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
+            <version>1.14.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -66,8 +66,8 @@
                 <version>3.8.0</version>
                 <configuration>
                     <release>11</release>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>15</source>
+                    <target>15</target>
                     <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
                 <dependencies>

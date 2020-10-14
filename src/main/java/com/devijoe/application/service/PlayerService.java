@@ -22,18 +22,17 @@ import java.util.Map;
 public class PlayerService implements IRender, IUpdate {
 
     Entity player;
-    TextureService textureService;
+    TextureService textureService = new TextureService();
     ControlManager manager;
 
     // todo Настройку player поизводить через фабрику
     public PlayerService(double x, double y, double speed, int hp, Direction direction, ControlManager manager) {
-        textureService = new TextureService();
         this.player = new Player(
                 x,
                 y,
-                textureService.generateTextureMapForModel(TextureType.GREEN_STANDARD_TANK),
-                speed,
-                hp,
+                (Map<Direction, BufferedImage>) textureService.generateTextureMapForModel(TextureType.GREEN_STANDARD_TANK),
+                3,
+                3,
                 Direction.NORTH,
                 manager);
         this.manager = manager;

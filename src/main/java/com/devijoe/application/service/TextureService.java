@@ -16,7 +16,7 @@ public class TextureService {
 
     private TextureAtlas atlas = new TextureAtlas("src/main/resources/texture/texture_atlas.png");
 
-    public Map<Direction, BufferedImage> generateTextureMapForModel(TextureType type) {
+    public Map<? extends Key, BufferedImage> generateTextureMapForModel(TextureType type) {
 
         Map map = new HashMap();
 
